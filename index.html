@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="./stylesheet.css">
+    <script src="script.js"></script>
+    <meta charset="utf-8" />
+    <title>You Do Not Have the Right to Speak</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+      <li id="stats"><a href="stats.html">Statistics</a></li>
+      <li id="bib"><a href="bib.html">Bibliography</a></li>
+      <li id="des"><a href="description.html">Description</a></li>
+      <li id="ref"><a href="reflection.html">Reflection</a></li>
+    </ul>
+    </nav>
+    <!-- <img src="images/D4TC-Final-map.png" width="2000" height="1500" -->
+    <!-- alt="Police brutality map" id="map"/> -->
+      <!-- <span id= "clock" ></span>
+      <button onclick="darkMode()" class="darkMode">Toggle light and dark mode</button> -->
+      <div id="map" style='width: 400px; height: 300px;'></div>
+      <script type="text/javascript">
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpdHRwcmljZTk2IiwiYSI6ImNrZ2NrbHlvYTAxM2IzOWxqOGYzMWgyMzcifQ.CXWLjbWbWrf1Te2WclqceQ';
+        const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+          center: [-80.4600575,35.7568057], // starting position [lng, lat]
+          zoom: 2 // starting zoom
+        });
+        const data = [
+          {
+            longLat:[-80.4600575, 35.7568057],
+            name: 'Clinton, NC',
+            dob: '10-22-1995'
+          },
+          {
+            longLat:[-84.386330, 33.753746],
+            name: 'Atlanta, GA',
+            dob: '09-22-1995'
+          }
+        ]
+        data.forEach(m => new mapboxgl.Marker({ anchor: 'center' })
+          .setLngLat([m.longLat[0], m.longLat[1]])
+          .setPopup(new mapboxgl.Popup().setHTML(`
+            <div class="tooltip">
+              <p>${m.name}</p>
+              <p>${m.dob}</p>
+            </div>
+          `))
+          .addTo(map));
+
+      </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+index.html
+
+<button><span  ></span></button>
+
+<button onclick="darkMode()" class="darkMode">Toggle light and dark mode</button>
+
+<button id="stats" onclick="toggleStats()">Statistics</button>
+<div id="statsInfo">
+  <h3>Statistics</h3>
+  <ul>
+    <li>African Americans are five times more likely to be stopped by the police than white people (NAACP 2020)</li>
+
+    <li>Black men are two times as likely than black women to be stopped without just cause (NAACP 2020)</li>
+
+    <li>"65% of Black adults have felt targeted because of their race. Similarly, approximately 35% of Latino
+      and Asian adults have felt targeted because of race" (NAACP 2020)</li>
+
+    <li>From 2019 to 2020, 1,025 people have been shot and killed by the police (NAACP 2020)</li>
+
+    <li></li>
+
+    <li></li>
+
+    <li></li>
+
+    <li></li>
+
+    <li></li>
+  </ul>
+</div>
+
+<button id="bib" onclick="toggleBib()">Bibliography</button>
+<div id="bibInfo">
+  <h3>Bibliography</h3>
+  NAACP. Criminal Justice Fact Sheet. Last modified, 2020. https://www.naacp.org/criminal-justice-fact-sheet/.
+</div>
+
+<!-- <p style="text-align:center; font-size:35px; color:blue;">You Do Not Have the Right to Speak</p> -->
+<!-- <button onclick="myFunction()">Try it</button> -->
+<!-- <img src="images/badge.svg" onclick="toggleInfo()" alt="badge" class="badge"/>
+<p id="info">Info</p> -->
+
+<!-- <p>
+  <b>Note:</b> The element will not take up any space when the display
+  property set to "none".
+</p> -->
+
+<p id="Note"><b>Note:</b> Click the buttons above twice to reveal and hide the contents.</p>
+
+stylesheet.css
+
+/* #statsInfo {
+  display: none;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  background-color: blue;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+#bibInfo{
+  display: none;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  margin-top: 20px;
+  margin-left: 5px;
+} */
+
+/* nav ul li {
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 313.26px;
+  min-width: 313.1px;
+  background-color: blue;
+  color: white;
+  border: 1.5px solid black;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a{
+  color: white;
+  background-color: blue;
+} */
+
+/* nav{
+  padding-left: 100px;
+} */
+/* ul{
+  padding: 0;
+  margin: 0
+} */
+
+script.js
+
+// let formattedTime = new Date().toLocaleTimeString('en-US');
+
+https://stackoverflow.com/questions/26043820/display-12-hour-and-24-hour-time
+  // document.write(newdate + " " +formattedTime);
+
+https://medium.com/front-end-weekly/how-to-convert-24-hours-format-to-12-hours-in-javascript-ca19dfd7419d
+// var dt = new Date();
+// var hours = dt.getHours() ; // gives the value in 24 hours format
+// var AmOrPm = hours >= 12 ? 'pm' : 'am';
+// hours = (hours % 12) || 12;
+// var minutes = dt.getMinutes() ;
+// var finalTime = hours + ":" + minutes + " " + AmOrPm;
+// document.write(finalTime);
+
+// function toggleStats() {
+// 	var x = document.getElementById("statsInfo");
+//
+// 	if (x.style.display === "none") {
+// 		x.style.display = "block";
+// 	} else {
+// 		x.style.display = "none";
+// 	}
+// }
+
+// function toggleBib() {
+// 	var x = document.getElementById("bibInfo");
+//
+// 	if (x.style.display === "none") {
+// 		x.style.display = "block";
+// 	} else {
+// 		x.style.display = "none";
+// 	}
+// }

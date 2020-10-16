@@ -1,0 +1,18 @@
+Sources:
+DT Study tutors: Pranjal Deep and Jill Shah
+
+https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+
+https://www.w3schools.com/HTML/html_lists.asp
+
+https://www.youtube.com/watch?v=oUpEKosnC8E&list=PL4cUxeGkcC9gfoKa5la9dsdCNpuey2s-V&index=3
+
+UNCW CSC 365 Mrs. Marnie J. Ferner 
+
+Time:
+
+https://www.youtube.com/watch?v=C2CrBlGvbEM
+
+https://stackoverflow.com/questions/2013255/how-to-get-year-month-day-from-a-date-object
