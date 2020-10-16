@@ -1,51 +1,24 @@
 index.html
 
-<button><span  ></span></button>
-
-<button onclick="darkMode()" class="darkMode">Toggle light and dark mode</button>
-
-<button id="stats" onclick="toggleStats()">Statistics</button>
-<div id="statsInfo">
-  <h3>Statistics</h3>
-  <ul>
-    <li>African Americans are five times more likely to be stopped by the police than white people (NAACP 2020)</li>
-
-    <li>Black men are two times as likely than black women to be stopped without just cause (NAACP 2020)</li>
-
-    <li>"65% of Black adults have felt targeted because of their race. Similarly, approximately 35% of Latino
-      and Asian adults have felt targeted because of race" (NAACP 2020)</li>
-
-    <li>From 2019 to 2020, 1,025 people have been shot and killed by the police (NAACP 2020)</li>
-
-    <li></li>
-
-    <li></li>
-
-    <li></li>
-
-    <li></li>
-
-    <li></li>
-  </ul>
-</div>
-
-<button id="bib" onclick="toggleBib()">Bibliography</button>
-<div id="bibInfo">
-  <h3>Bibliography</h3>
-  NAACP. Criminal Justice Fact Sheet. Last modified, 2020. https://www.naacp.org/criminal-justice-fact-sheet/.
-</div>
-
-<!-- <p style="text-align:center; font-size:35px; color:blue;">You Do Not Have the Right to Speak</p> -->
-<!-- <button onclick="myFunction()">Try it</button> -->
-<!-- <img src="images/badge.svg" onclick="toggleInfo()" alt="badge" class="badge"/>
-<p id="info">Info</p> -->
-
-<!-- <p>
-  <b>Note:</b> The element will not take up any space when the display
-  property set to "none".
-</p> -->
-
-<p id="Note"><b>Note:</b> Click the buttons above twice to reveal and hide the contents.</p>
+// const data = [
+//   {
+//     longLat:[-76.632918,39.291273],
+//     name: 'Baltimore, MD'
+//   },
+//   {
+//     longLat:[-84.386330, 33.753746],
+//     name: 'Atlanta, GA',
+//     dob: '09-22-1995'
+//   }
+// ]
+// data.forEach(m => new mapboxgl.Marker({ anchor: 'center' })
+//   .setLngLat([m.longLat[0], m.longLat[1]])
+//   .setPopup(new mapboxgl.Popup().setHTML(`
+//     <div class="tooltip">
+//       <p>${m.name}</p>
+//     </div>
+//   `))
+//   .addTo(map));
 
 stylesheet.css
 

@@ -18,41 +18,132 @@
       <li id="ref"><a href="reflection.html">Reflection</a></li>
     </ul>
     </nav>
+
     <!-- <img src="images/D4TC-Final-map.png" width="2000" height="1500" -->
     <!-- alt="Police brutality map" id="map"/> -->
       <!-- <span id= "clock" ></span>
       <button onclick="darkMode()" class="darkMode">Toggle light and dark mode</button> -->
-      <div id="map" style='width: 400px; height: 300px;'></div>
+      <div id="map" style="width: 900px; height: 900px;"></div>
       <script type="text/javascript">
         mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpdHRwcmljZTk2IiwiYSI6ImNrZ2NrbHlvYTAxM2IzOWxqOGYzMWgyMzcifQ.CXWLjbWbWrf1Te2WclqceQ';
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-          center: [-80.4600575,35.7568057], // starting position [lng, lat]
-          zoom: 2 // starting zoom
+          center: [-70.4600575,40.7568057], // starting position [lng, lat]
+          zoom: 2.5 // starting zoom
         });
-        const data = [
-          {
-            longLat:[-80.4600575, 35.7568057],
-            name: 'Clinton, NC',
-            dob: '10-22-1995'
+
+        var geojson = {
+          type: 'FeatureCollection',
+          features: [{
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-77.032, 38.913]
+            },
+            properties: {
+              title: 'Mapbox',
+              description: 'Washington, D.C.'
+            }
           },
           {
-            longLat:[-84.386330, 33.753746],
-            name: 'Atlanta, GA',
-            dob: '09-22-1995'
-          }
-        ]
-        data.forEach(m => new mapboxgl.Marker({ anchor: 'center' })
-          .setLngLat([m.longLat[0], m.longLat[1]])
-          .setPopup(new mapboxgl.Popup().setHTML(`
-            <div class="tooltip">
-              <p>${m.name}</p>
-              <p>${m.dob}</p>
-            </div>
-          `))
-          .addTo(map));
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-122.414, 37.776]
+            },
+            properties: {
+              title: 'Mapbox',
+              description: 'San Francisco, California'
+            }
+          }]
+        };
 
+        // add markers to map
+        geojson.features.forEach(function(marker) {
+
+          // create a HTML element for each feature
+          var badge = document.createElement('div');
+          badge.className = 'badge-marker';
+
+          // make a marker for each feature and add to the map
+          new mapboxgl.Marker(badge)
+            .setLngLat(marker.geometry.coordinates)
+            .addTo(map);
+
+
+            new mapboxgl.Marker(badge)
+              .setLngLat(marker.geometry.coordinates)
+              .setPopup(new mapboxgl.Popup({ offset: 5 }) // add popups
+              .setHTML(`
+                <div>
+                  <p class="tooltip">${marker.properties.description}</p>
+                </div>
+              `))
+              .addTo(map);
+
+
+            // create a HTML element for each feature
+            var victim = document.createElement('div');
+            victim.className = 'victim-marker';
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(victim)
+              .setLngLat(marker.geometry.coordinates)
+              .addTo(map);
+
+
+            new mapboxgl.Marker(victim)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({ offset: 5 }) // add popups
+                .setHTML(`
+                <div>
+                    <p class="tooltip">${marker.properties.title}</p>
+                </div>
+                `))
+                .addTo(map);
+
+
+                var protest = document.createElement('div');
+                protest.className = 'protest-marker';
+
+                // make a marker for each feature and add to the map
+                new mapboxgl.Marker(protest)
+                  .setLngLat(marker.geometry.coordinates)
+                  .addTo(map);
+
+
+                  new mapboxgl.Marker(protest)
+                    .setLngLat(marker.geometry.coordinates)
+                    .setPopup(new mapboxgl.Popup({ offset: 5 }) // add popups
+                    .setHTML(`
+                      <div>
+                        <p class="tooltip">${marker.properties.description}</p>
+                      </div>
+                    `))
+                    .addTo(map);
+
+
+                  // create a HTML element for each feature
+                  var riot = document.createElement('div');
+                  riot.className = 'riot-marker';
+
+                  // make a marker for each feature and add to the map
+                  new mapboxgl.Marker(riot)
+                    .setLngLat(marker.geometry.coordinates)
+                    .addTo(map);
+
+
+                  new mapboxgl.Marker(riot)
+                      .setLngLat(marker.geometry.coordinates)
+                      .setPopup(new mapboxgl.Popup({ offset: 5 }) // add popups
+                      .setHTML(`
+                      <div>
+                          <p class="tooltip">${marker.properties.title}</p>
+                      </div>
+                      `))
+                      .addTo(map);
+        });
       </script>
   </body>
 </html>
