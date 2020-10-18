@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-76.609383, 39.299236]
+    },
+    "properties": {
+      "victim": "Freddie Gray (1989-2015)",
+
+      "description": "Freddie Gray grew up in the Gilmore Homes projects located in Sandtown-Winchester which is Baltimore’s poorest black neighborhood.His arrest on April 12, 2015 was recorded on a bystander’s cellphone.He died on April 19, 2015 from a spinal cord injury while in police custody.",
+
+      "protest": "Anger from years of unchecked police brutality in Baltimore exploded after Freddie Gray’s death. Thousands began protesting in the streets of Baltimore.",
+
+      "riot": "Riots began on April 27th, 2015, the day Gray was laid to rest. The police shut down public transportation near the mall which prevent students from going home and the riots started. Sandtown was burned that evening: Police cars, a drug store , and a many store fronts.",
+
+      "badge": "The police officers involved are: BPD Officers Caesar Goodson, William Porter, Garrett Miller, and Edward Nero; Lieutenant Brian Rice; and Sergeant Alicia White. They were put on paid leave which caused the protests to intensify. On September 12, 2017, the Justice Department decided not to prosecute the officers due to lack of evidence.",
+    }
+  },
+
+  }]
+}

@@ -20,6 +20,11 @@ index.html
 //   `))
 //   .addTo(map));
 
+<!-- <img src="images/D4TC-Final-map.png" width="2000" height="1500" -->
+<!-- alt="Police brutality map" id="map"/> -->
+  <!-- <span id= "clock" ></span>
+  <button onclick="darkMode()" class="darkMode">Toggle light and dark mode</button> -->
+
 stylesheet.css
 
 /* #statsInfo {
@@ -107,3 +112,37 @@ https://medium.com/front-end-weekly/how-to-convert-24-hours-format-to-12-hours-i
 // 		x.style.display = "none";
 // 	}
 // }
+
+
+function placeIcons() {
+	//nav 57 pixels = 0.251101321585 in
+	//get the x & y values of my map in Photoshop and then guess the ones for my symbols
+	//also assigned id(s) for each one
+	const badge = document.getElementsByClassName("badge");
+	const victim = document.getElementsByClassName("victim_symbol");
+	const riots = document.getElementsByClassName("fire");
+	const protest = document.getElementsByClassName("fist");
+
+	const iconArray = [badge, victim, riots, protest];
+
+	for (i = 0; i < iconArray.length; i++) {
+		var icon = document.createElement("icon");
+		icon = iconArray;
+		// icon.src = "images/badge.svg" + i;
+		document.body.appendChild(icon);
+	}
+}
+
+map.js
+
+import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpdHRwcmljZTk2IiwiYSI6ImNrZ2NrbHlvYTAxM2IzOWxqOGYzMWgyMzcifQ.CXWLjbWbWrf1Te2WclqceQ';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+center: [-74.5, 40], // starting position [lng, lat]
+zoom: 9 // starting zoom
+});
+
+document.getElementById('map').innerHTML = map;

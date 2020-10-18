@@ -61,53 +61,71 @@ body {
 .badge-marker {
   background-image: url('images/badge.svg');
   background-size: cover;
-  width: 2%;
-  height: 2%;
+  width: 1%;
+  height: 1%;
   border-radius: 50%;
   cursor: pointer;
+  margin-left: 1px;
 }
 
 .victim-marker {
   background-image: url('images/victim-symbol.svg');
   background-size: cover;
-  width: 2%;
-  height: 2%;
+  width: 1%;
+  height: 1%;
   border-radius: 50%;
   cursor: pointer;
-  /* margin-left: 20px; */
+  margin-left: 5px;
+  margin-top: 10px;
 }
 
 .protest-marker {
   background-image: url('images/fist.svg');
   background-size: cover;
-  width: .8%;
-  height: .8%;
+  width: 1%;
+  height: 1%;
   border-radius: 50%;
   cursor: pointer;
-  /* margin-left: 10px; */
+  margin-left: -5px;
+  margin-top: 10px;
 }
 
 .riot-marker {
   background-image: url('images/fire.svg');
   background-size: cover;
-  width: .8%;
-  height: .8%;
+  width: 1%;
+  height: 1%;
   border-radius: 50%;
   cursor: pointer;
-  /* margin-left: -20px; */
+  margin-left: -8px;
 }
 
-.mapboxgl-popup {
-  max-width: 400px;
-}
+/* .mapboxgl-popup {
+  max-width: 200px;
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+} */
 
 .tooltip {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  font-family: 'Times New Roman', serif;
   color: black;
-  font-size: 15px;
+  font-size: 10px;
+  margin-left: -1px;
+  padding: 0;
 }
 
+div.tooltip{
+  position: relative;
+  margin-left: 0;
+  padding: 0;
+}
+
+#victim-name{
+  font-weight: bold;
+  margin-left: 25px;
+}
 /* .mapboxgl-popup-content {
 
 } */
@@ -117,7 +135,18 @@ body {
   top:0;
   bottom:0;
   padding: 0;
-  margin-top: 50px;
+  margin-top: 200px;
+}
+
+#legend{
+  width: 50%;
+  height:50%;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+ol li{
+  margin-left: 80px;
 }
 
 nav{
