@@ -1,0 +1,188 @@
+index.html
+
+// const data = [
+//   {
+//     longLat:[-76.632918,39.291273],
+//     name: 'Baltimore, MD'
+//   },
+//   {
+//     longLat:[-84.386330, 33.753746],
+//     name: 'Atlanta, GA',
+//     dob: '09-22-1995'
+//   }
+// ]
+// data.forEach(m => new mapboxgl.Marker({ anchor: 'center' })
+//   .setLngLat([m.longLat[0], m.longLat[1]])
+//   .setPopup(new mapboxgl.Popup().setHTML(`
+//     <div class="tooltip">
+//       <p>${m.name}</p>
+//     </div>
+//   `))
+//   .addTo(map));
+
+<!-- <img src="images/D4TC-Final-map.png" width="2000" height="1500" -->
+<!-- alt="Police brutality map" id="map"/> -->
+  <!-- <span id= "clock" ></span>
+  <button onclick="darkMode()" class="darkMode">Toggle light and dark mode</button> -->
+
+stylesheet.css
+
+/* #statsInfo {
+  display: none;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  background-color: blue;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+#bibInfo{
+  display: none;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  margin-top: 20px;
+  margin-left: 5px;
+} */
+
+/* nav ul li {
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 313.26px;
+  min-width: 313.1px;
+  background-color: blue;
+  color: white;
+  border: 1.5px solid black;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a{
+  color: white;
+  background-color: blue;
+} */
+
+/* nav{
+  padding-left: 100px;
+} */
+/* ul{
+  padding: 0;
+  margin: 0
+} */
+
+.badge {
+  background-image: url("images/badge.svg");
+  position: relative;
+  left: -450px;
+  top: -500px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.victim_symbol {
+  background-image: url("images/victim_symbol.svg");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+.fist {
+  background-image: url("images/fist.svg");
+  position: absolute;
+  left: 1221px;
+  top: 22px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.fire {
+  background-image: url("images/fire.svg");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+script.js
+
+// let formattedTime = new Date().toLocaleTimeString('en-US');
+
+https://stackoverflow.com/questions/26043820/display-12-hour-and-24-hour-time
+  // document.write(newdate + " " +formattedTime);
+
+https://medium.com/front-end-weekly/how-to-convert-24-hours-format-to-12-hours-in-javascript-ca19dfd7419d
+// var dt = new Date();
+// var hours = dt.getHours() ; // gives the value in 24 hours format
+// var AmOrPm = hours >= 12 ? 'pm' : 'am';
+// hours = (hours % 12) || 12;
+// var minutes = dt.getMinutes() ;
+// var finalTime = hours + ":" + minutes + " " + AmOrPm;
+// document.write(finalTime);
+
+// function toggleStats() {
+// 	var x = document.getElementById("statsInfo");
+//
+// 	if (x.style.display === "none") {
+// 		x.style.display = "block";
+// 	} else {
+// 		x.style.display = "none";
+// 	}
+// }
+
+// function toggleBib() {
+// 	var x = document.getElementById("bibInfo");
+//
+// 	if (x.style.display === "none") {
+// 		x.style.display = "block";
+// 	} else {
+// 		x.style.display = "none";
+// 	}
+// }
+
+
+function placeIcons() {
+	//nav 57 pixels = 0.251101321585 in
+	//get the x & y values of my map in Photoshop and then guess the ones for my symbols
+	//also assigned id(s) for each one
+	const badge = document.getElementsByClassName("badge");
+	const victim = document.getElementsByClassName("victim_symbol");
+	const riots = document.getElementsByClassName("fire");
+	const protest = document.getElementsByClassName("fist");
+
+	const iconArray = [badge, victim, riots, protest];
+
+	for (i = 0; i < iconArray.length; i++) {
+		var icon = document.createElement("icon");
+		icon = iconArray;
+		// icon.src = "images/badge.svg" + i;
+		document.body.appendChild(icon);
+	}
+}
+
+map.js
+
+import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpdHRwcmljZTk2IiwiYSI6ImNrZ2NrbHlvYTAxM2IzOWxqOGYzMWgyMzcifQ.CXWLjbWbWrf1Te2WclqceQ';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+center: [-74.5, 40], // starting position [lng, lat]
+zoom: 9 // starting zoom
+});
+
+document.getElementById('map').innerHTML = map;
