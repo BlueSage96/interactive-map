@@ -170,7 +170,7 @@ For months, the Taylor family has been demanding justice. Last month, they were 
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [30.0974,96.0783]
+      coordinates: [-96.0783,30.0974]
     },
     properties: {
       victim: `Sandra Bland(1987-2015)<sup><a href="footnotes.html">32</a></sup>`,
